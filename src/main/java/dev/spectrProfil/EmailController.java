@@ -22,7 +22,8 @@ public class EmailController {
 
         try {
             //subject это заголовок
-            emailService.sendSimpleEmail(order.getEmail(),  "Заказ", "Поступил заказ от " + order.getName() +
+            //toAdress куда улетает
+            emailService.sendSimpleEmail("kolomensky48482@gmail.com",  "Заказ", "Поступил заказ от " + order.getName() +
                     ", г. " + order.getCity() + ", номер телефона: " + order.getNumber() + ", email: " +
                     order.getEmail() + ". " +
                     "Cообщение: " +
